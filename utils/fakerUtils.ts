@@ -57,4 +57,8 @@ export class FakerData {
         return faker.company.name();
     }
 
+     static companyOne(): string {
+        return faker.company.name();
+    }
+
 }
