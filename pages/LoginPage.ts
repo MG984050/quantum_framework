@@ -22,7 +22,7 @@ export class LoginPage extends BrowserInteractionsImpl {
     }
 
     async enterPassword(password: string): Promise<void> {
-        await this.type(this.password, password, 'password')
+        await this.type(this.password, password, 'password button')
     }
 
     async clickLogin(): Promise<HomePage> {
