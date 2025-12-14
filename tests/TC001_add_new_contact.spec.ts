@@ -10,13 +10,13 @@ test('Add New Contact and Verify', async ({ addContactDetailsPage, page, contact
         { type: 'Test Description', description: "Verifying newly created contact is displayed in contact leads page" }
     );
 
-    const excelReader = new ExcelReader('../resources/testdata.xlsx');
-    const data = excelReader.getRowByTestcase('contact', 'TC_ID', 'TC_001');
+    // const excelReader = new ExcelReader('../resources/testdata.xlsx');
+    // const data = excelReader.getRowByTestcase('contact', 'TC_ID', 'TC_001');
 
     const contactName = FakerData.getFirstName();
     await addContactDetailsPage.enterName(contactName);
     await addContactDetailsPage.enterEmail(FakerData.getEmail());
-    await addContactDetailsPage.enterPhoneNumber(data.PHONE_NUMBER);
+    await addContactDetailsPage.enterPhoneNumber('9952045203');
     await addContactDetailsPage.enterCompany(FakerData.company());
     await addContactDetailsPage.checkRadio(appConstants.radioValue);
     await addContactDetailsPage.selectStatus(appConstants.selectStatus);
@@ -27,7 +27,8 @@ test('Add New Contact and Verify', async ({ addContactDetailsPage, page, contact
     await addContactDetailsPage.checkCheckbox(appConstants.checkboxValue);
     await addContactDetailsPage.selectPriority(appConstants.selectPriority);
     await addContactDetailsPage.enterDate(appConstants.date);
-    await addContactDetailsPage.enterNotes(data.DESCRIPTION);
+    //await addContactDetailsPage.enterNotes(data.DESCRIPTION);
+    await addContactDetailsPage.enterNotes('Testing');
     contactsLeadsPage = await addContactDetailsPage.clickAddButton();
 
     const actualContactName = await contactsLeadsPage.isContactNameDisplayed();
