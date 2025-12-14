@@ -26,7 +26,7 @@ export class LoginPage extends BrowserInteractionsImpl {
     }
 
     async clickLogin(): Promise<HomePage> {
-        await this.click(this.signIn, 'Login');
-        return new HomePage(this.page, this.context);
+        await this.click(this.signIn, 'Login button');
+        return new HomePage(this.page, this.context );
     }
 }

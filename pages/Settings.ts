@@ -22,6 +22,7 @@ export class Settings extends BrowserInteractionsImpl {
     }
 
     async clickUploadFile(): Promise<void> {
-        await this.click(this.uploadPhoto, 'Upload');
+        await this.click(this.uploadPhoto, 'Upload file');
+
     }
 }
