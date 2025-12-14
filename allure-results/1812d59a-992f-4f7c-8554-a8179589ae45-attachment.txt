@@ -1,0 +1,22 @@
+Error reading the Excel file: Error: ENOENT: no such file or directory, open 'D:\quantum\resources\testdata.xlsx'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at read_binary (D:\quantum\quantum\node_modules\xlsx\xlsx.js:3153:44)
+    at readSync (D:\quantum\quantum\node_modules\xlsx\xlsx.js:23698:69)
+    at Object.readFile [as readFileSync] (D:\quantum\quantum\node_modules\xlsx\xlsx.js:23738:9)
+    at ExcelReader.readExcel (D:\quantum\quantum\utils\excelUtils.ts:14:35)
+    at ExcelReader.getRowByTestcase (D:\quantum\quantum\utils\excelUtils.ts:59:27)
+    at D:\quantum\quantum\tests\TC001_add_new_contact.spec.ts:14:30
+    at D:\quantum\quantum\node_modules\playwright\lib\worker\workerMain.js:322:15
+    at D:\quantum\quantum\node_modules\playwright\lib\worker\testInfo.js:311:17
+    at TimeoutManager.withRunnable (D:\quantum\quantum\node_modules\playwright\lib\worker\timeoutManager.js:68:9)
+    at TestInfoImpl._runWithTimeout (D:\quantum\quantum\node_modules\playwright\lib\worker\testInfo.js:309:34)
+    at D:\quantum\quantum\node_modules\playwright\lib\worker\workerMain.js:320:22
+    at WorkerMain._runTest (D:\quantum\quantum\node_modules\playwright\lib\worker\workerMain.js:295:5)
+    at WorkerMain.runTestGroup (D:\quantum\quantum\node_modules\playwright\lib\worker\workerMain.js:199:11)
+    at process.<anonymous> (D:\quantum\quantum\node_modules\playwright\lib\common\process.js:65:22) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\quantum\\resources\\testdata.xlsx'
+}
